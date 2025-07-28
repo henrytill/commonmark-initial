@@ -83,7 +83,7 @@ instance HasAttributes Inlines where
   addAttributes attrs = map $ addAttributesInline attrs
 
 mkInline :: (Monoid a) => InlineF (Inline a) -> Inline a
-mkInline il = MkInline mempty il
+mkInline = MkInline mempty
 
 instance IsInline Inlines where
   lineBreak = [mkInline LineBreak]
@@ -135,7 +135,7 @@ instance HasAttributes Blocks where
   addAttributes attrs = map $ addAttributesBlock attrs
 
 mkBlock :: (Monoid a) => BlockF a (Block a) -> Block a
-mkBlock b = MkBlock mempty b
+mkBlock = MkBlock mempty
 
 instance IsBlock Inlines Blocks where
   paragraph ils = [mkBlock $ Paragraph ils]
