@@ -15,7 +15,7 @@ copyright:          Copyright (c) 2025, Henry Till
 category:           Text
 build-type:         Simple
 extra-doc-files:    CHANGELOG.md
-tested-with:        ghc ==9.4.8 || ==9.6.7 || ==9.8.4 || ==9.10.2 || ==9.12.2
+tested-with:        GHC ==9.4.8 || ==9.6.7 || ==9.8.4 || ==9.10.2 || ==9.12.2
 
 source-repository head
   type: git
@@ -26,9 +26,9 @@ common warnings
 
 library
     import:           warnings
-    exposed-modules:  Commonmark.Initial
-    hs-source-dirs:   src
     default-language: GHC2021
+    hs-source-dirs:   src
+    exposed-modules:  Commonmark.Initial
     build-depends:
         base >=4.17.2.1 && <4.22,
         commonmark ^>=0.2.6.1,
@@ -39,10 +39,10 @@ library
 test-suite commonmark-initial-test
     import:           warnings
     default-language: GHC2021
-    other-modules:    Commonmark.InitialTest
-    type:             exitcode-stdio-1.0
     hs-source-dirs:   test
+    type:             exitcode-stdio-1.0
     main-is:          Main.hs
+    other-modules:    Commonmark.InitialTest
     build-depends:
         base >=4.17.2.1 && <4.22,
         commonmark ^>=0.2.6.1,
