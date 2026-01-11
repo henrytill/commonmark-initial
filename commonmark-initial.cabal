@@ -30,7 +30,7 @@ library
     hs-source-dirs:   src
     exposed-modules:  Commonmark.Initial
     build-depends:
-        base >=4.17.2.1 && <4.22,
+        base >=4.17.2.1 && <4.23,
         commonmark ^>=0.2.6.1,
         deriving-compat ^>=0.6.7,
         free ^>=5.2,
@@ -44,7 +44,7 @@ test-suite commonmark-initial-test
     main-is:          Main.hs
     other-modules:    Commonmark.InitialTest
     build-depends:
-        base >=4.17.2.1 && <4.22,
+        base >=4.17.2.1 && <4.23,
         commonmark ^>=0.2.6.1,
         commonmark-extensions ^>=0.2.6,
         dwergaz ^>=0.3.1.0,
