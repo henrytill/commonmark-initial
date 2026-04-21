@@ -1,6 +1,6 @@
 cabal-version:      3.0
 name:               commonmark-initial
-version:            0.1.0.0
+version:            0.1.0.1
 synopsis:           An initial encoding of the CommonMark language
 description:
   This library provides an initial encoding of the CommonMark language
